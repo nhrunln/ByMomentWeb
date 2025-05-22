@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <title>By Moment</title>
+</head>
+<body>
+   
+   <!--menu ve bastaki gorsel-->
+    <div class="menu-container">
+    <nav>
+       
+        <ul class="menu"> <div id="logo">
+            <img src="By Momentlogo2.png">
+        </div>
+            <li><a href="#header">Ana Sayfa</a></li>
+            <li><a href="#kutular">Hakkımızda</a></li>
+            <li><a href="Menü.pdf"target="_blank">Menü</a></li>
+            <li><a href="rezervasyon.html">Rezervasyon</a></li>
+            <li><a href="#contactForm">İletişim</a></li>
+        </ul> </nav> 
+     
+     <section id="header">
+    <img src="yemek1.jpg">
+    </section>
+    <section id="pgrubu">
+    <p id="soz1">"By Moment"</p>
+    <p id="soz2">Tam burada tam da bu andasın.</p>
+    <p id="soz3">An'ın farkına var.</p></section></div>
+    <!--main kismi-->
+    <div class="main-container">
+        <section id="kutular">
+            <div class="kutucuk birinci">
+                <img src="yemek8.jpg" alt="First Image">
+            </div>
+            <div class="kutucuk ikinci">
+                <h1>Hakkımızda</h1>
+                <p>Restoranımız, gastronomik mükemmeliyet arayışı içinde olan misafirlerimize eşsiz bir deneyim sunmayı amaçlamaktadır. Her bir yemek, mutfak sanatının en üst seviyesine ulaşma hedefiyle titizlikle hazırlanmaktadır. Şeflerimiz, dünyaca ünlü teknikleri yerel ve mevsimsel malzemelerle birleştirerek özgün tatlar yaratmaktadır. Bu özenli süreç, her tabakta duyulara hitap eden bir lezzet şöleni ortaya koyar. Bizim için yemek, sadece bir ihtiyaç değil, paylaşılan anılar ve keyifli sohbetlerin bir parçası olan bir sanattır.</p>
+                <p>Menümüzde yer alan her detay, konuklarımızın unutulmaz bir deneyim yaşamalarını sağlamak için düşünülmüştür. İster geleneksel tariflerin modern yorumları, ister dünya mutfağından özenle seçilmiş lezzetler olsun, her öğünümüzde kalite ve lezzet odaklı bir yaklaşım sergiliyoruz. Mutfak ekibimiz, misafirlerimizin damak zevkine hitap eden, rafine ve yaratıcı dokunuşlarla hazırlanan tabaklar sunmak için tutkuyla çalışmaktadır. Sunumlarımız, lezzetin görsel bir anlatımı olarak tasarlanarak sofralarınızı süslemektedir.</p>
+                <p><img id="QR" src="qrkod.jpg"></p>
+            </div>
+            <div class="kutucuk ucuncu">
+                <img src="kolaj1.jpg" alt="Third Image">
+            </div>
+        </section>
+    </div>
+    
+    <div class="slider-container">
+        <h1>Bröşürlerimiz</h1>
+        <div class="slider">
+            <img src="9.png" alt="Fotoğraf 1">
+            <img src="11.png" alt="Fotoğraf 2">
+            <img src="15.png" alt="Fotoğraf 3">
+            <img src="8.png" alt="Fotoğraf 4">
+            <img src="14.png"alt="Fotoğraf 5">
+            <img src="9.png" alt="Fotoğraf 1">
+            <img src="11.png" alt="Fotoğraf 2">
+            <img src="15.png" alt="Fotoğraf 3">
+            <img src="8.png" alt="Fotoğraf 4">
+            <img src="14.png"alt="Fotoğraf 5">
+        </div>
+    </div>
+    <script>
+const slider = document.querySelector('.slider');
+const slides = Array.from(slider.children);
+let currentIndex = 0;
+
+function moveSlider() {
+    // Her slaytı kaydırmak için %100'lük genişlik üzerinden hesaplama yapılır
+    currentIndex += 1;
+
+    // Slaytların sonuna geldiğinde başa dönmeden devam etmesi için kontrol
+    if (currentIndex >= slides.length) {
+        currentIndex = 0; // Sonuna ulaştığında başa dön
+    }
+
+    // Kaydırma işlemi
+    slider.style.transform = `translateX(-${100 * currentIndex}%)`;
+}
+
+// Kaydırma animasyonu her 3 saniyede bir yenilenecek
+setInterval(moveSlider, 3000);
+    </script>
+    <!--menu icin main-->
+    <div class="menumain-container">
+        <div id="baslik"><h2>Menu</h2></div>
+     <div class="menufoto">
+        
+      <div class="image">  <img src="BY MOMENT.png"></div>
+       <div class="image"><img src="menuyemek.jpg"></div> 
+        <div class="image"><img src="kokteyl2.jpg"></div>
+     </div>
+     <a href="Menü.pdf" target="_blank" class="menu-button">Menüye Git</a>
+
+        
+    </div>
+    
+    <div class="contact-container">
+        <h1 class="text-center">İletişim</h1>
+        <div class="contact-content">
+          <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79815.84030687711!2d26.93645224213436!3d38.42503040986871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdd12bdc22863%3A0x20701b2d706a60f0!2zxLBzdGlueWVQYXJrIMSwem1pcg!5e0!3m2!1str!2str!4v1730707713256!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="contact-form">
+            <form name="sentMessage" id="contactForm" novalidate>
+              <div class="form-group">
+                <input type="text" id="name" name="name" class="form-control" placeholder="Ad Soyad" required="required" data-error="Ad alanı gereklidir.">
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group">
+                <input type="tel" name="phone" id="phone" class="form-control" placeholder="Telefon" required="required">
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" id="email" class="form-control" placeholder="Email" required="required">
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group">
+                <textarea name="message" id="message" class="form-control" rows="4" placeholder="Mesaj" required></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+              <button type="submit" class="btn btn-custom btn-lg">Gönder</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer Section -->
+      <div id="footer">
+        <div class="container text-center">
+          <div class="col-md-8 col-md-offset-2">
+            <p>&copy; By Moment. Designed by nehir</p>
+          </div>
+        </div>
+      </div>
+      
+
+    
+    
+</body>
+</html>

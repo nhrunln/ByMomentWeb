@@ -1,0 +1,342 @@
+/* Genel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    background-color: brown;
+    margin: 0; /* Varsayılan kenar boşluklarını kaldır */
+    padding: 0; /* Varsayılan iç boşlukları kaldır */
+}
+
+/* Header kısmı */
+#header {
+    width: 100%;              /* Header genişliği tüm ekranı kaplar */
+    height: 70vh;            /* Header yüksekliği tam ekran yüksekliği kadar olur */
+    overflow: hidden         /* Görsel taşarsa gizlenir */
+}
+
+#header img {
+    width: 100%;              /* Görsel header genişliğini tamamen doldurur */
+    height: 75%;             /* Görsel header yüksekliğini tamamen doldurur */
+    object-fit: cover;        /* Görselin en boy oranını koruyarak, taşmadan header'ı kaplar */
+    display: block;           /* Varsayılan boşlukları engeller */
+    position: absolute;
+    left: 0px; /* Soldan uzaklık */  
+    top: 0px; /* Üstten uzaklık, menünün altında ayarlayın */  
+    z-index: -1; /* Diğer tüm elementleri*/
+}
+
+/* Menü kısmı */
+nav {
+    padding: 15px 0;         /* Üst ve alt boşluklar */
+   
+}
+#logo{  
+    margin-top: 0px;
+    padding-left: 0px;
+    height:160px;
+    width:160px;
+
+   
+
+}
+#logo img{
+    width: 160px;
+    height: 160px;
+    float: left;
+   
+   
+}
+
+.menu-container {
+    z-index: 1;
+    padding: 15px 0;        /* Üst ve alt boşluklar */
+}
+
+
+.menu-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: #5e0202;
+    opacity: 0.7; /* Sadece arka plan şeffaf */
+    z-index: -1; /* Arka planda kalması için */
+    z-index: 1;
+    position: fixed; 
+    
+}
+ 
+ .menu {
+    list-style-type: none; /* Liste noktalarını kaldır */
+    padding: 0;           /* İç boşlukları kaldır */
+    margin: 0;            /* Kenar boşluklarını kaldır */
+    display: flex;        /* Flexbox ile yatay düzenleme */
+    flex-direction: row;
+    position: fixed;  
+    z-index: 1;
+    margin-left:680px;
+    margin-top: 0px;
+   
+} */
+
+.menu li {
+    margin: 0 15px; /* Menü öğeleri arasına boşluk */
+   
+}
+
+.menu a {
+    color: white; /* Yazı rengi */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    font-size: 18px; /* Yazı boyutu */
+    padding: 20px 25px; /* İç boşluk */
+    display: block; /* Linklerin tıklanabilir alanını genişlet */
+    border-radius: 5px; /* Köşeleri yuvarlat */
+    position: relative; /* Arka plan ve yazıyı ayırmak için */
+    z-index: 1; /* Yazının arka plandan önde olmasını sağla */
+   
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover etkisi için daha açık şeffaf gri */
+    color: #ff6347; /* Hover etkisi için metin rengi değişikliği */ 
+}
+.main-container {
+    width: 100%;
+    padding: 0px;
+}
+
+#kutular {
+    display: flex; /* Yan yana hizalamak için flex kullanıyoruz */
+    justify-content: space-between; /* Aralarındaki boşluğu eşit dağıt */
+}
+
+.kutucuk {
+    flex: 1; /* Her kutucuğun eşit genişlikte olmasını sağlar */
+    margin: 10px; /* Kutucuklar arasında boşluk bırak */
+    padding: 20px; /* İçerik için boşluk */
+    background-color: #f1f1f1; /* Kutucuk arka plan rengi */
+    border-radius: 8px; /* Kenarların yuvarlatılması */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+}
+#QR{
+    width:50%;
+    height:50%;
+    padding-left: 110px;
+}
+
+.kutucuk img {
+    width: 100%; /* Resmin kutucuğa sığmasını sağlar */
+    height: 100%;
+    border-radius: 8px; /* Resmin kenarlarını yuvarlatır */
+}
+#soz1{
+    letter-spacing: 9px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 200%;
+    font-family: "DM Serif Display", serif;
+    font-weight: 600;
+    font-style: normal;
+    align-items: center;
+}
+#soz2{
+    color: white;
+    text-align: center;
+    font-size: 100%;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+#soz3{
+    color: white;
+    text-align: center;
+    font-size: 100%;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+   
+}
+#pgrubu{
+    width: 95%; /* Genişlik */
+    height: 200px; /* Yükseklik */
+    border: 2px solid white; /* Beyaz kenar */
+    margin: 20px auto;
+    margin-bottom: 6px;
+    
+}
+.slider-container {
+    width: 40%;            /* Kapsayıcının genişliği */
+    height: 800px;         /* Kapsayıcının yüksekliği */
+    overflow: hidden;      /* Dışarı taşan içeriği gizler */
+    position: relative;    /* İçerik konumlandırması için temel konum sağlar */
+    margin: auto;          /* Ortalamak için */
+    border: double 15px #730d0d;
+    margin-top:10%;
+    padding: 0%;
+}
+.slider-container h1{
+    text-align: center;
+    color:#f1f1f1;
+}
+
+.slider {
+    display: flex;         /* Fotoğrafları yan yana dizmek için flexbox kullanılır */
+    height: 100%;         /* Kapsayıcı ile aynı yüksekliğe sahip olur */
+    transition: transform 0.5s ease-in-out; /* Kaydırma animasyonu */
+    
+}
+
+/* Fotoğraf ayarları */
+.slider img {
+    min-width: 100%;      /* Her fotoğraf, kapsayıcının genişliğini doldurmalı */
+    height: 100%;         /* Kapsayıcının yüksekliği ile eşit olmalı */
+    object-fit: cover;    /* Fotoğrafın orantısını koruyarak kapsayıcıyı doldurur */
+    flex-shrink: 0;       /* Fotoğrafların küçülmesini engeller */
+   
+}
+#baslik {
+    color: white;
+    text-align: center;
+    margin: 0; /* Varsayılan margin'i kaldır */
+    padding-top: 20px; /* Üst boşluk ekle */
+    font-size: 36px; /* Başlık boyutu */
+    font-weight: bold;
+    margin-top: 90px;
+}
+
+.menumain-container {
+    width: 100%;
+    height: 700px;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menufoto { 
+    display: flex; 
+    justify-content: space-between;
+    width: 100%; /* Fotoğrafları konteynırın tamamına yayar */
+    padding: 30px 0; /* Üst ve alt boşluk ekler */
+}
+
+.image {
+    flex: 1;
+    margin: 0 1px;
+}
+
+.image img {
+    width: 504px;
+    height: 400px;
+}
+
+.menu-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FF6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.menu-button:hover {
+    background-color: #FF4500;
+}
+
+.contact-container {
+    width: 94%;
+    margin: 0 auto;
+    margin-top: 200px;
+    background-color: #2b2b2b;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.text-center {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-map {
+    flex: 1;
+    max-width: 50%;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 50%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    width: 85%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+    border-color: #66cc66;
+}
+
+.contact-form button {
+    width: 90%;
+    padding: 15px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #66cc66;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #55aa55;
+}
+
+
+
+ 
+  
+  @media (max-width: 768px) {
+    .contact-content {
+      flex-direction: column;
+    }
+  
+    .contact-map, .contact-form {
+      max-width: 100%;
+    }
+  }
+  
